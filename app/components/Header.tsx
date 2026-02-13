@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { signOut } from "../actions/auth";
@@ -14,13 +13,13 @@ export default async function Header() {
         Hello, {session?.user.name}
       </p>
 
-      <Button
+      <button
         onClick={signOut}
-        variant="link"
-        className="cursor-pointer text-orange-200 ml-5"
+        type="button"
+        className="cursor-pointer text-orange-200 ml-5 hover:underline"
       >
         Sign Out
-      </Button>
+      </button>
     </div>
   );
 }
