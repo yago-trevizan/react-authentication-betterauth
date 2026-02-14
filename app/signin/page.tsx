@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { signIn } from "@/app/actions/auth";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import GithubButton from "@/app/components/GithubButton";
+import DiscordButton from "@/app/components/DiscordButton";
 import { auth } from "@/lib/auth";
 
 export default async function SignInPage() {
@@ -53,7 +54,10 @@ export default async function SignInPage() {
           OR
         </h1>
 
-        <GithubButton />
+        <div className="flex flex-col gap-y-3">
+          <GithubButton />
+          <DiscordButton />
+        </div>
       </div>
 
       <div className="flex items-center gap-x-2 mt-5">
