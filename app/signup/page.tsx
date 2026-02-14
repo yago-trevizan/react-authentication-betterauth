@@ -17,7 +17,7 @@ export default async function SignUpPage() {
   return (
     <div className="h-screen flex items-center justify-center flex-col bg-blue-950">
       <div className="border-4 border-orange-700 w-md p-5 rounded-md bg-zinc-100">
-        <h1 className="text-orange-700 text-2xl font-semibold text-center">
+        <h1 className="text-center text-xl text-zinc-700 font-semibold uppercase">
           Create your account
         </h1>
 

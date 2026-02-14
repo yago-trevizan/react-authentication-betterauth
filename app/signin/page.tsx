@@ -19,8 +19,8 @@ export default async function SignInPage() {
   return (
     <div className="h-screen flex items-center justify-center flex-col bg-blue-950">
       <div className="border-4 border-orange-700 w-md p-5 rounded-md bg-zinc-100">
-        <h1 className="text-orange-700 text-2xl font-semibold text-center">
-          Tell us who you are
+        <h1 className="text-center text-xl text-zinc-700 font-semibold uppercase">
+          Use your credentials
         </h1>
 
         <form action={signIn} className="flex flex-col gap-y-5 mt-5">
@@ -50,8 +50,8 @@ export default async function SignInPage() {
           <ErrorMessage />
         </form>
 
-        <h1 className="text-center text-xl my-5 text-zinc-700 font-semibold">
-          OR
+        <h1 className="text-center text-xl text-zinc-700 font-semibold uppercase my-5">
+          Or
         </h1>
 
         <div className="flex flex-col gap-y-3">
