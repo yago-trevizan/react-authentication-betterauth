@@ -1,9 +1,20 @@
-import { signIn } from "@/app/actions/auth";
 import Link from "next/link";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { signIn } from "@/app/actions/auth";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import GithubButton from "@/app/components/GithubButton";
+import { auth } from "@/lib/auth";
 
-export default function SignInPage() {
+export default async function SignInPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (session) {
+    redirect("/");
+  }
+
   return (
     <div className="h-screen flex items-center justify-center flex-col bg-blue-950">
       <div className="border-4 border-orange-700 w-md p-5 rounded-md bg-zinc-100">
