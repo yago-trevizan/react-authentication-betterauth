@@ -1,5 +1,6 @@
-import { signUp } from "@/app/actions/auth";
 import Link from "next/link";
+import { signUp } from "@/app/actions/auth";
+import ErrorMessage from "@/app/components/ErrorMessage";
 
 export default function SignUpPage() {
   return (
@@ -40,6 +41,8 @@ export default function SignUpPage() {
           >
             Sign Up
           </button>
+
+          <ErrorMessage />
         </form>
       </div>
 

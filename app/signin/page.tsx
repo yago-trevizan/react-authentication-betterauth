@@ -1,5 +1,6 @@
 import { signIn } from "@/app/actions/auth";
 import Link from "next/link";
+import ErrorMessage from "@/app/components/ErrorMessage";
 import GithubButton from "@/app/components/GithubButton";
 
 export default function SignInPage() {
@@ -33,6 +34,8 @@ export default function SignInPage() {
           >
             Sign In
           </button>
+
+          <ErrorMessage />
         </form>
 
         <h1 className="text-center text-xl my-5 text-zinc-700 font-semibold">
