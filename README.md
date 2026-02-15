@@ -35,3 +35,26 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to interac
 The application consists of three pages: **SignIn**, **SignUp** and **Home**.
 
 You can create an account typing name, email and password. Also, you can sign in with your credentials, [GitHub][2] or [Discord][3].
+
+You must create a `.env` file on the root directory with the following variables:
+
+- BETTER_AUTH_SECRET
+- BETTER_AUTH_URL
+- GITHUB_CLIENT_ID
+- GITHUB_CLIENT_SECRET
+- DISCORD_CLIENT_ID
+- DISCORD_CLIENT_SECRET
+
+_BETTER_AUTH_SECRET_ can be generated through the command:
+
+```bash
+openssl rand -base64 32
+```
+
+_BETTER_AUTH_URL_ is the Base URL of your app. Example:
+
+```bash
+http://localhost:3000
+```
+
+To get the remaining variables, access: [GitHub Developer Portal](https://github.com/settings/developers) and [Discord Developer Portal](https://discord.com/developers/applications).
